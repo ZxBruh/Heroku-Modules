@@ -5,17 +5,15 @@
 # / /_ / / | |  |  |  |  (_) | (_| | | |_| | |  /\__ \
 # /__/_\_|  |_/\_|  |_/ \_/ \,_|_|\,_|_|\_||_/
 #                                                             
-# Author: @ZxModules
+# meta developer: @zxbruh, @zxmodules
 
 import io
 from .. import loader, utils
 
 @loader.tds
 class FastCoderMod(loader.Module):
-    """Модуль который пишет код в файл под выборочным названием и форматом.
-    
-    Автор: @ZxModules"""
-    
+    """Модуль который пишет код в файл под выборочным названием и форматом."""
+
     strings = {"name": "FastCoder"}
 
     async def кодcmd(self, message):
@@ -31,7 +29,7 @@ class FastCoderMod(loader.Module):
             return
 
         full_filename, code_content = split_args
-        
+
         file = io.BytesIO(code_content.encode('utf-8'))
         file.name = full_filename
         file.seek(0)
